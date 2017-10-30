@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker exec -i -t perl6fastmag_rakudo_1 /bin/bash;

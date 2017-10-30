@@ -1,0 +1,10 @@
+#!/bin/bash
+
+docker exec -i -t perl6fastmag_rakudo_1 /bin/bash -c " \
+    cd /app/;
+    echo \"deb http://ftp.jp.debian.org/debian/ unstable main contrib non-free\" > /etc/apt/sources.list;
+    apt-get update;
+    apt-get install -y libgumbo1 libssl1.0-dev;
+    zef install Cro::HTTP YAMLish Gumbo --/test --force;";
+
+docker exec -i -t perl6fastmag_rakudo_1 /bin/bash;
